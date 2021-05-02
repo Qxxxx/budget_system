@@ -44,3 +44,8 @@ bazel*
 
 # Local History for Visual Studio Code
 .history/
+
+# clion
+
+.clwb
+.idea
