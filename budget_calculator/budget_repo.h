@@ -7,13 +7,9 @@ using Budgets = std::vector<Budget>;
 class BudgetRepo
 {
 public:
-    Budgets &FindAll()
+    virtual Budgets &FindAll()
     {
         return budgets;
-    }
-    void add_budget(date::year_month year_month, int ammout)
-    {
-        budgets.push_back({year_month, ammout});
     }
 
 protected:
