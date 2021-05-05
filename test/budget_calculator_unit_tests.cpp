@@ -7,7 +7,7 @@ using namespace testing;
 
 class StubBudgetRepo : public BudgetRepo {
 public:
-    MOCK_METHOD(Budgets &, FindAll, ());
+    MOCK_METHOD(const Budgets &, FindAll, ());
 };
 
 class BudgetCalculatorFixture : public Test {
@@ -17,7 +17,7 @@ protected:
         end_date = end_date_input;
     }
 
-    void ReturnFindAll(Budgets &budgets_input) {
+    void ReturnFindAll(const Budgets &budgets_input) {
         ON_CALL(stub_budget_repo, FindAll()).WillByDefault(ReturnRef(budgets_input));
     }
 

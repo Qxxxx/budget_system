@@ -7,7 +7,7 @@ using Budgets = std::vector<Budget>;
 class BudgetRepo
 {
 public:
-    virtual Budgets &FindAll()
+    virtual const Budgets &FindAll()
     {
         return budgets;
     }
