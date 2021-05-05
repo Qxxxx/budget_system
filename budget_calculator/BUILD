@@ -1,6 +1,7 @@
 cc_library(
     name = "budget_calculator",
     srcs = [
+        "budget.cpp",
         "budget_calculator.cpp",
     ],
     hdrs = [

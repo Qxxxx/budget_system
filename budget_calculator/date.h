@@ -509,7 +509,7 @@ namespace date
 
     }  // namespace detail
 
-// year_month
+// yearmonth
 
     class year_month
     {
@@ -2012,7 +2012,7 @@ using std::chrono::abs;
         return weekday_last{*this};
     }
 
-// year_month
+// yearmonth
 
     CONSTCD11
     inline
@@ -3289,7 +3289,7 @@ using std::chrono::abs;
         return ymwdl + (-dy);
     }
 
-// year_month from operator/()
+// yearmonth from operator/()
 
     CONSTCD11
     inline
