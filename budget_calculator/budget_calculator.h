@@ -6,7 +6,7 @@
 class BudgetCalculator
 {
 public:
-    BudgetCalculator(BudgetRepo &budget_repo) : budget_repo_(budget_repo) {}
+    explicit BudgetCalculator(BudgetRepo &budget_repo) : budget_repo_(budget_repo) {}
     int QueryBudget(date::year_month_day start_date, date::year_month_day end_date);
 
 private:

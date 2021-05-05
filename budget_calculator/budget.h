@@ -8,6 +8,7 @@ using date::year_month_day;
 struct Budget
 {
     int CalculateIntersectionDays(const year_month_day &start_date, const year_month_day& end_date) const;
+    int CalculateDailyBudget() const;
     year_month yearmonth;
     int amount;
 };

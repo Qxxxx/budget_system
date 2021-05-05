@@ -8,3 +8,9 @@ int Budget::CalculateIntersectionDays(const year_month_day &start_date, const ye
     return start_within_month <= end_within_month ? (end_within_month.day() - start_within_month.day()).count() + 1 : 0;
 }
 
+int Budget::CalculateDailyBudget() const {
+    const date::year_month_day ymd_last{yearmonth / date::last};
+    const auto days_num = (unsigned)ymd_last.day();
+    return amount/static_cast<int>(days_num);
+}
+

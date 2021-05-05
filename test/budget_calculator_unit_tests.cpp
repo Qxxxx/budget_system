@@ -70,3 +70,11 @@ TEST_F(BudgetCalculatorFixture, QueryBudgetWithinAcrossingTwoMonthsAfterSecondMo
     BudgetCalculator budget_calculator{stub_budget_repo};
     EXPECT_EQ(budget_calculator.QueryBudget(start_date, end_date), 25);
 }
+
+TEST_F(BudgetCalculatorFixture, QueryBudgetWithinTwoMonthsAfterSecondMonthWhenDifferentDailyBudget) {
+    SetQueryStartEndDate(2019_y / 5 / 6, 2019_y / 6 / 20);
+    Budgets budgets_input{{2019_y / 5, 31},{2019_y / 6, 300}};
+    ReturnFindAll(budgets_input);
+    BudgetCalculator budget_calculator{stub_budget_repo};
+    EXPECT_EQ(budget_calculator.QueryBudget(start_date, end_date), 226);
+}
